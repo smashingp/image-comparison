@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group = 'es.alop'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
+    implementation group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.1'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
